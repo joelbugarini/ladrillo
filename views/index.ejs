@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<link href='http://fonts.googleapis.com/css?family=Abel|Advent+Pro:300' rel='stylesheet' type='text/css'>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Ladrillo - <%= title %></title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="logo brand" href="#">Ladrillo</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active advent solid"><a href="#">Busca</a></li>
+                            <li><a href="#about" class="advent solid">Vende</a></li>
+                            <li><a href="#contact" class="advent solid">Mapa</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle advent solid" data-toggle="dropdown">Estimación <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="advent solid">Action</a></li>
+                                    <li><a href="#" class="advent solid">Another action</a></li>
+                                    <li><a href="#" class="advent solid">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li class="nav-header">Nav header</li>
+                                    <li><a href="#" class="advent solid">Separated link</a></li>
+                                    <li><a href="#" class="advent solid">One more separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="navbar-form pull-right">
+                            <div class="btn-group">
+                            	<button type="submit" class="btn btn-small">Entrar</button>
+                            	<button type="submit" class="btn btn-small"><i class="icon-book"></i></button>
+                            </div>
+                            
+                        </form>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header row-fluid hidden-phone hidden-tablet">
+        	<div class="quote span2 text-right super">
+                <p>Tu casa </p>
+	        	<p>Tu espacio</p>
+        	</div>
+        	<div class="span1">
+        	</div>
+        	<div class="span2">
+                <a href="#" data-toggle="example" title="example">
+                    <img src="./img/House.png" class="img-rounded">
+                </a>
+        	</div>
+        	<div class="span2">
+        		<img src="./img/Sell.png" class="img-rounded">
+        	</div>
+        	<div class="span2">
+        		<img src="./img/Mobile.png" class="img-rounded">
+        	</div>
+        </div>
+
+        <div class="container">
+
+            <!-- Main Search -->
+            <div class="row-fluid">
+                <div class="span4 offset4 search-frame">
+                    <h1>Encuentra tu casa</h1>
+                    <input type="texto" class="" placeholder="Las Quintas, Hermosillo…">
+                </div>
+                <img src="./img/hermosillo-3.png" class="img-rounded">
+            </div>
+
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="span4">
+                    <h2 >Busca</h2>
+                    <p>Habla con un asesor o con el dueño de la casa en tiempo real para comprar, vender o rentar una casa. </p>
+                    <p><a class="btn" href="#">Leer mas &raquo;</a></p>
+                </div>
+                <div class="span4">
+                    <h2>Vende</h2>
+                    <p>Publica tu casa en Ladrillo o busca un asesor de bienes raices especializado que te ayude a venderla </p>
+                    <p><a class="btn" href="#">Leer mas &raquo;</a></p>
+               </div>
+                <div class="span4">
+                    <h2>Estimaciones</h2>
+                    <p>¿No sabes cuanto vale tu casa en el mercado actual? llena un formulario y nosotros lo estimamos.</p>
+                    <p><a class="btn" href="#">Leer mas &raquo;</a></p>
+                </div>
+            </div>
+
+
+
+            <hr>
+
+            <footer>
+                <p>&copy; Company 2013</p>
+            </footer>
+
+        </div> <!-- /container -->
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
