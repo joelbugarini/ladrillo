@@ -42,30 +42,25 @@
                     <a class="logo brand" href="#">Ladrillo</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li class="active advent solid"><a href="#">Busca</a></li>
-                            <li><a href="#about" class="advent solid">Vende</a></li>
-                            <li><a href="#contact" class="advent solid">Mapa</a></li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle advent solid" data-toggle="dropdown">Estimación <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" class="advent solid">Action</a></li>
-                                    <li><a href="#" class="advent solid">Another action</a></li>
-                                    <li><a href="#" class="advent solid">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li class="nav-header">Nav header</li>
-                                    <li><a href="#" class="advent solid">Separated link</a></li>
-                                    <li><a href="#" class="advent solid">One more separated link</a></li>
-                                </ul>
-                            </li>
+                            <li class="active advent solid"><a href="index.html">Busca</a></li>
+                            <li><a href="vende.html" class="advent solid">Vende</a></li>
+                            <li><a href="estima.html" class="advent solid">Estima</a></li>
+                            
                         </ul>
-                        <form class="navbar-form pull-right">
+                       <!-- <form class="navbar-form pull-right">
                             <div class="btn-group">
                             	<button type="submit" class="btn btn-small">Entrar</button>
                             	<button type="submit" class="btn btn-small"><i class="icon-book"></i></button>
                             </div>
                             
+                        </form>/.nav-collapse -->
+                        <form class="navbar-form pull-right">
+                            <div class="btn-group">
+                                <a href="Entrar.html" class=" btn btn-small">Entrar</a>
+                                <a href="EntrarIco.html" class=" btn btn-small"><i class="icon-book"></i></a>
+                            </div>
                         </form>
-                    </div><!--/.nav-collapse -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -78,9 +73,7 @@
         	<div class="span1">
         	</div>
         	<div class="span2">
-                <a href="#" data-toggle="example" title="example">
-                    <img src="./img/House.png" class="img-rounded">
-                </a>
+                <img src="./img/House.png" class="img-rounded">
         	</div>
         	<div class="span2">
         		<img src="./img/Sell.png" class="img-rounded">
@@ -96,7 +89,15 @@
             <div class="row-fluid">
                 <div class="span4 offset4 search-frame">
                     <h1>Encuentra tu casa</h1>
-                    <input type="texto" class="" placeholder="Las Quintas, Hermosillo…">
+                    <input type="texto" class="" placeholder="Las Quintas, Hermosillo…"></input>
+                    <div class="btn-group align-left" data-toggle="buttons-checkbox">
+                      <button type="button" class="btn">Venta</button>
+                      <button type="button" class="btn">Renta</button>
+                    </div>
+
+
+                    <button type="button" class="btn btn-primary align-right">Buscar</button>
+
                 </div>
                 <img src="./img/hermosillo-3.png" class="img-rounded">
             </div>
@@ -119,10 +120,6 @@
                     <p><a class="btn" href="#">Leer mas &raquo;</a></p>
                 </div>
             </div>
-
-
-
-            <hr>
 
             <footer>
                 <p>&copy; Company 2013</p>
