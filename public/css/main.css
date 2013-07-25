@@ -101,6 +101,10 @@ input[type=texto]:focus {
 	background-position: 98% -22px;
 }
 
+input[type=texto]::-ms-clear {
+    display: none;
+}
+
 .logo{
 	font-family: 'Advent Pro', sans-serif;
 	color: #D2D2D2;

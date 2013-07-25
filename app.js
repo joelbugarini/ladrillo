@@ -28,8 +28,8 @@ if ('development' == app.get('env')) {
 }
  
 app.get('/', routes.index);
-app.get('/index', routes.index);
-app.get('/buscar', routes.buscar);
+app.get('/index.html', routes.index);
+app.get('/busca.html', routes.buscar);
 app.get('/users', user.list); 
 
 http.createServer(app).listen(app.get('port'), function(){
