@@ -9,6 +9,8 @@ var express = require('express')
   , http = require('http')
   , path = require('path');
 
+var prop = require('./properties/Properties');
+
 var app = express();
 
 // all environments
@@ -32,6 +34,8 @@ app.get('/index.html', routes.index);
 app.get('/busca.html', routes.buscar);
 app.get('/users', user.list); 
 
+var Joel = new prop.Usuario(1, "joel", "rare", 2);
+
 http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+  console.log('Express server listening on port ' + app.get('port') +' '+ Joel.greet());
 });
