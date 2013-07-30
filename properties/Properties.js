@@ -15,7 +15,8 @@ exports.Usuario = (function () {
 /*------------------------ Properties -------------------*/
 
 exports.agente = (function () {
-    function agente(Usuario_idUsuario,Nombre,Descripcion,Direccion,Telefonos,Especialista,Contribuciones,Fecha) {
+    function agente(IdAgente, Usuario_idUsuario,Nombre,Descripcion,Direccion,Telefonos,Especialista,Contribuciones,Fecha) {
+        this.IdAgente = IdAgente;
         this.Usuario_idUsuario = Usuario_idUsuario;
         this.Nombre = Nombre;
         this.Descripcion = Descripcion;
@@ -24,66 +25,74 @@ exports.agente = (function () {
         this.Especialista = Especialista;
         this.Contribuciones = Contribuciones;
         this.Fecha = Fecha;
-        return agente;
+        }; return agente;
 })();
 
 exports.agentecriticas = (function () {
-    function agentecriticas(Agente_idAgente,Critica_idCritica) {
+    function agentecriticas(IdAgenteCriticas,Agente_idAgente,Critica_idCritica) {
+        this.IdAgenteCriticas = IdAgenteCriticas;
         this.Agente_idAgente = Agente_idAgente;
         this.Critica_idCritica = Critica_idCritica;
-        return agentecriticas;
+        }; return agentecriticas;
 })();
 
 exports.aislamiento = (function () {
-    function aislamiento(Nombre,Descripcion,Precio) {
+    function aislamiento(IdAislamiento,Nombre,Descripcion,Precio) {
+        this.IdAislamiento = IdAislamiento;
         this.Nombre = Nombre;
         this.Descripcion = Descripcion;
         this.Precio = Precio;
-        return aislamiento;
+        }; return aislamiento;
 })();
 
 exports.calefaccion = (function () {
-    function calefaccion(Nombre,Descripcion,Precio) {
+    function calefaccion(IdCalefaccion,Nombre,Descripcion,Precio) {
+        this.IdCalefaccion = IdCalefaccion;
         this.Nombre = Nombre;
         this.Descripcion = Descripcion;
         this.Precio = Precio;
-        return calefaccion;
+        }; return calefaccion;
 })();
 
 exports.casa = (function () {
-    function casa(Ubicacion_idUbicacion,Construccion_idConstruccion,Terreno_idTerreno) {
+    function casa(IdCasa,Ubicacion_idUbicacion,Construccion_idConstruccion,Terreno_idTerreno) {
+        this.IdCasa = IdCasa;
         this.Ubicacion_idUbicacion = Ubicacion_idUbicacion;
         this.Construccion_idConstruccion = Construccion_idConstruccion;
         this.Terreno_idTerreno = Terreno_idTerreno;
-        return casa;
+        }; return casa;
 })();
 
 exports.casaservicios = (function () {
-    function casaservicios(Casa_idCasa,Servicio_idServicio,Distancia) {
+    function casaservicios(IdCasaServicios,Casa_idCasa,Servicio_idServicio,Distancia) {
+        this.IdCasaServicios = IdCasaServicios;
         this.Casa_idCasa = Casa_idCasa;
         this.Servicio_idServicio = Servicio_idServicio;
         this.Distancia = Distancia;
-        return casaservicios;
+        }; return casaservicios;
 })();
 
 exports.cerramiento = (function () {
-    function cerramiento(Nombre,Descripcion,Precio) {
+    function cerramiento(IdCerramiento,Nombre,Descripcion,Precio) {
+        this.IdCerramiento = IdCerramiento;
         this.Nombre = Nombre;
         this.Descripcion = Descripcion;
         this.Precio = Precio;
-        return cerramiento;
+        }; return cerramiento;
 })();
 
 exports.chimenea = (function () {
-    function chimenea(Nombre,Descripcion,Precio) {
+    function chimenea(IdChimenea,Nombre,Descripcion,Precio) {
+        this.IdChimenea = IdChimenea;
         this.Nombre = Nombre;
         this.Descripcion = Descripcion;
         this.Precio = Precio;
-        return chimenea;
+        }; return chimenea;
 })();
 
 exports.construccion = (function () {
-    function construccion(Metros,Cuarto,Baño,Estacionamiento,Cocina,Sala,Plantas) {
+    function construccion(IdConstruccion,Metros,Cuarto,Baño,Estacionamiento,Cocina,Sala,Plantas) {
+        this.IdConstruccion = IdConstruccion;
         this.Metros = Metros;
         this.Cuarto = Cuarto;
         this.Baño = Baño;
@@ -91,11 +100,12 @@ exports.construccion = (function () {
         this.Cocina = Cocina;
         this.Sala = Sala;
         this.Plantas = Plantas;
-        return construccion;
+        }; return construccion;
 })();
 
 exports.construccionmaterial = (function () {
-    function construccionmaterial(Construccion_idConstruccion,Pared_idPared,Aislamiento_idAislamiento,Piso_idPiso,Cerramiento_idCerramiento,Techo_idTecho,Calefaccion_idCalefaccion,Pintura_idPintura,Refrigeracion_idRefrigeracion,Chimenea_idChimenea) {
+    function construccionmaterial(IdConstruccionMaterial,Construccion_idConstruccion,Pared_idPared,Aislamiento_idAislamiento,Piso_idPiso,Cerramiento_idCerramiento,Techo_idTecho,Calefaccion_idCalefaccion,Pintura_idPintura,Refrigeracion_idRefrigeracion,Chimenea_idChimenea) {
+        this.IdConstruccionMaterial = IdConstruccionMaterial;
         this.Construccion_idConstruccion = Construccion_idConstruccion;
         this.Pared_idPared = Pared_idPared;
         this.Aislamiento_idAislamiento = Aislamiento_idAislamiento;
@@ -106,105 +116,117 @@ exports.construccionmaterial = (function () {
         this.Pintura_idPintura = Pintura_idPintura;
         this.Refrigeracion_idRefrigeracion = Refrigeracion_idRefrigeracion;
         this.Chimenea_idChimenea = Chimenea_idChimenea;
-        return construccionmaterial;
+        }; return construccionmaterial;
 })();
 
 exports.critica = (function () {
-    function critica(Usuario_idUsuario) {
+    function critica(IdCritica,Usuario_idUsuario) {
+        this.IdCritica = IdCritica;
         this.Usuario_idUsuario = Usuario_idUsuario;
-        return critica;
+        }; return critica;
 })();
 
 exports.estimacion = (function () {
-    function estimacion(Casa_idCasa,PrecioConstruccion,PrecioTerreno,PrecioTotal) {
+    function estimacion(IdEstimacion,Casa_idCasa,PrecioConstruccion,PrecioTerreno,PrecioTotal) {
+        this.IdEstimacion = IdEstimacion;
         this.Casa_idCasa = Casa_idCasa;
         this.PrecioConstruccion = PrecioConstruccion;
         this.PrecioTerreno = PrecioTerreno;
         this.PrecioTotal = PrecioTotal;
-        return estimacion;
+        }; return estimacion;
 })();
 
 exports.pared = (function () {
-    function pared(Nombre,Descripcion,Precio) {
+    function pared(IdPared,Nombre,Descripcion,Precio) {
+        this.IdPared = IdPared;
         this.Nombre = Nombre;
         this.Descripcion = Descripcion;
         this.Precio = Precio;
-        return pared;
+        }; return pared;
 })();
 
 exports.pintura = (function () {
-    function pintura(Nombre,Descripcion,Precio) {
+    function pintura(IdPintura,Nombre,Descripcion,Precio) {
+        this.IdPintura = IdPintura;
         this.Nombre = Nombre;
         this.Descripcion = Descripcion;
         this.Precio = Precio;
-        return pintura;
+        }; return pintura;
 })();
 
 exports.piso = (function () {
-    function piso(Nombre,Descripcion,Precio) {
+    function piso(IdPiso,Nombre,Descripcion,Precio) {
+        this.IdPiso = IdPiso;
         this.Nombre = Nombre;
         this.Descripcion = Descripcion;
         this.Precio = Precio;
-        return piso;
+        }; return piso;
 })();
 
 exports.refrigeracion = (function () {
-    function refrigeracion(Nombre,Descripcion,Precio) {
+    function refrigeracion(IdRefrigeracion,Nombre,Descripcion,Precio) {
+        this.IdRefrigeracion = IdRefrigeracion;
         this.Nombre = Nombre;
         this.Descripcion = Descripcion;
         this.Precio = Precio;
-        return refrigeracion;
+        }; return refrigeracion;
 })();
 
 exports.servicio = (function () {
-    function servicio(Ubicacion_idUbicacion,Nombre,Descripcion,Tipo) {
+    function servicio(IdServicio,Ubicacion_idUbicacion,Nombre,Descripcion,Tipo) {
+        this.IdServicio = IdServicio;
         this.Ubicacion_idUbicacion = Ubicacion_idUbicacion;
         this.Nombre = Nombre;
         this.Descripcion = Descripcion;
         this.Tipo = Tipo;
-        return servicio;
+        }; return servicio;
 })();
 
 exports.techo = (function () {
-    function techo(Nombre,Descripcion,Precio) {
+    function techo(IdTecho,Nombre,Descripcion,Precio) {
+        this.IdTecho = IdTecho;
         this.Nombre = Nombre;
         this.Descripcion = Descripcion;
         this.Precio = Precio;
-        return techo;
+        }; return techo;
 })();
 
 exports.terreno = (function () {
-    function terreno(Metros,LinderoN,LinderoS,LinderoE,LinderoO) {
+    function terreno(IdTerreno,Metros,LinderoN,LinderoS,LinderoE,LinderoO) {
+        this.IdTerreno = IdTerreno;
         this.Metros = Metros;
         this.LinderoN = LinderoN;
         this.LinderoS = LinderoS;
         this.LinderoE = LinderoE;
         this.LinderoO = LinderoO;
-        return terreno;
+        }; return terreno;
 })();
 
 exports.ubicacion = (function () {
-    function ubicacion(Latitud,Longitud) {
+    function ubicacion(IdUbicacion,Latitud,Longitud) {
+        this.IdUbicacion = IdUbicacion;
         this.Latitud = Latitud;
         this.Longitud = Longitud;
-        return ubicacion;
+        }; return ubicacion;
 })();
 
 exports.usuario = (function () {
-    function usuario(Nombre,Contraseña,Tipo) {
+    function usuario(IdUsuario, Nombre,Contraseña,Tipo) {
+        this.IdUsuario = IdUsuario;
         this.Nombre = Nombre;
         this.Contraseña = Contraseña;
         this.Tipo = Tipo;
-        return usuario;
+        }; return usuario;
 })();
 
 exports.usuariocasas = (function () {
-    function usuariocasas(Usuario_idUsuario,Casa_idCasa) {
+    function usuariocasas(IdUsuarioCasas,Usuario_idUsuario,Casa_idCasa) {
+        this.IdUsuarioCasas = IdUsuarioCasas;
         this.Usuario_idUsuario = Usuario_idUsuario;
         this.Casa_idCasa = Casa_idCasa;
-        return usuariocasas;
-})();}
-            }
+        }; return usuariocasas;
+})();
+      
             
 
 /*
