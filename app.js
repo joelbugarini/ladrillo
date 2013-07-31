@@ -9,12 +9,13 @@ var express = require('express')
   , http = require('http')
   , path = require('path');
 
-var prop = require('./properties/Properties');
+var prop = require('./properties/Properties')
+  , sql = require('./properties/Connection');
 
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 1337, '192.168.1.67');
+app.set('port', process.env.PORT || 1337, '192.168.6.19');
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(express.favicon());
