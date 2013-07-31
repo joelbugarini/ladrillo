@@ -2,17 +2,19 @@ var prop = require('./Properties');
 var mysql = require('mysql');
 
 var connection = mysql.createConnection({
-  host     : '192.168.6.19',
-  user     : 'recon_ladrillo',
+  host     : 'localhost',
+  user     : 'root',
   password : 'rareware',
+  database : 'ladrillo_db',
 });
 
 connection.connect();
 
-connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
+connection.query('SELECT * FROM usuario', function(err, rows, fields) {
   if (err) throw err;
-
-  console.log('The solution is: ', rows[0].solution);
+  
+  var Joel = new prop.usuario(1, "joel", "rare", 2);
+  console.log(Joel.Nombre + ' the solution is: ', rows[0].Contraseña);
 });
 
 connection.end();
