@@ -10,11 +10,22 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-connection.query('SELECT * FROM usuario', function(err, rows, fields) {
+var Usuarios = new Array();
+
+connection.query('call SP_usuario_SelectAll()', function(err, rows, fields) {
   if (err) throw err;
-  
-  var Joel = new prop.usuario(1, "joel", "rare", 2);
-  console.log(Joel.Nombre + ' the solution is: ', rows[0].Contraseña);
+
+  	for(var i = 0; i < rows[0].length; i++ ){
+		Usuarios.push(new prop.usuario(rows[0][i].idUsuario, 
+									   rows[0][i].Nombre, 
+									   rows[0][i].Contraseña, 
+									   rows[0][i].Tipo));
+		//console.log('Selected: ' + i + Usuarios[i].Nombre);
+	}
 });
 
 connection.end();
+
+for(var i = 0; i < 3; i++ ){
+		console.log('Selected: ' + i + " " + Usuarios.Nombre);
+	}
