@@ -8,24 +8,39 @@ var connection = mysql.createConnection({
   database : 'ladrillo_db',
 });
 
-connection.connect();
+exports.readUsuarios = function(callback){
+	connection.connect();
+	connection.query('call SP_usuario_SelectAll()', callback);
+	connection.end();
+};
 
-var Usuarios = new Array();
+exports.fillUsuarios = function fillUsuarios(rows){
+	var Usuarios = new Array();
 
-connection.query('call SP_usuario_SelectAll()', function(err, rows, fields) {
-  if (err) throw err;
-
-  	for(var i = 0; i < rows[0].length; i++ ){
+	for(var i = 0; i < rows[0].length; i++ ){
 		Usuarios.push(new prop.usuario(rows[0][i].idUsuario, 
 									   rows[0][i].Nombre, 
 									   rows[0][i].Contraseña, 
 									   rows[0][i].Tipo));
-		//console.log('Selected: ' + i + Usuarios[i].Nombre);
 	}
-});
 
-connection.end();
+	return Usuarios;
+}
 
-for(var i = 0; i < 3; i++ ){
-		console.log('Selected: ' + i + " " + Usuarios.Nombre);
+exports.readUbicaciones = function(callback){
+	connection.connect();
+	connection.query('call SP_ubicacion_SelectAll()', callback);
+	connection.end();
+};
+
+exports.fillUbicaciones = function fillUbicaciones(rows){
+	var Ubicacion = new Array();
+
+	for(var i = 0; i < rows[0].length; i++ ){
+		Ubicacion.push(new prop.usuario(rows[0][i].idUbicacion, 
+									   rows[0][i].Latitud, 
+									   rows[0][i].Longitud));
 	}
+
+	return Ubicacion;
+}
