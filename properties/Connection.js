@@ -27,17 +27,17 @@ exports.fillUsuarios = function fillUsuarios(rows){
 	return Usuarios;
 }
 
-exports.readUbicaciones = function(callback){
+exports.readUbicacion = function(callback){
 	connection.connect();
 	connection.query('call SP_ubicacion_SelectAll()', callback);
 	connection.end();
 };
 
-exports.fillUbicaciones = function fillUbicaciones(rows){
+exports.fillUbicacion = function fillUbicacion(rows){
 	var Ubicacion = new Array();
 
 	for(var i = 0; i < rows[0].length; i++ ){
-		Ubicacion.push(new prop.usuario(rows[0][i].idUbicacion, 
+		Ubicacion.push(new prop.ubicacion(rows[0][i].idUbicacion, 
 									   rows[0][i].Latitud, 
 									   rows[0][i].Longitud));
 	}

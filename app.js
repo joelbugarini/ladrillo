@@ -40,7 +40,7 @@ app.get('/users', user.list);
 |---------------------- Asynchronous iteration pattern -------------------------|
 |------------------------------------------------------------------------------*/
 
-
+/*
 sql.readUsuarios( function(err, rows, fields) {
     if (err) throw err;
 
@@ -48,7 +48,7 @@ sql.readUsuarios( function(err, rows, fields) {
 		for(var i = 0; i < Usuarios.length; i++ ){
 			console.log('Selected: ' + i + ' ' + Usuarios[i].Nombre);
 		}
-});
+});*/
 
 
 /*------------------------------------------------------------------------------
