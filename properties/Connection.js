@@ -1,14 +1,16 @@
 var prop = require('./Properties');
 var mysql = require('mysql');
 
-var connection = mysql.createConnection({
+var sqlParam = {
   host     : 'localhost',
   user     : 'root',
   password : 'rareware',
   database : 'ladrillo_db',
-});
+};
+
 
 exports.readUsuarios = function(callback){
+	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_usuario_SelectAll()', callback);
 	connection.end();
@@ -24,10 +26,11 @@ exports.fillUsuarios = function fillUsuarios(rows){
 									   rows[0][i].Tipo));
 	}
 
-	return Usuarios;
+	return Usuarios; 
 }
 
 exports.readUbicacion = function(callback){
+	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_ubicacion_SelectAll()', callback);
 	connection.end();

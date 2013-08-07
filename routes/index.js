@@ -8,15 +8,20 @@ exports.index = function(req, res){
 };
 
 
-
-
 exports.buscar = function(req, res){
 	sql.readUbicacion( function(err, rows, fields) {
 		if (err) throw err;
 
 			var Ubicacion = sql.fillUbicacion(rows);
-
-			res.render('buscar.ejs', { title: Ubicacion[0].Latitud+','+Ubicacion[0].Longitud});
+			var lat = '';
+			for(var i = 0; i < Ubicacion.length; i++ ){
+				lat += 'var marker = new google.maps.Marker({'+
+            'position: new google.maps.LatLng(' + Ubicacion[i].Latitud+','+Ubicacion[i].Longitud +'),'+
+            'map: map, '+
+            'title: \'Usuario\' '+
+            '});';
+			}
+			res.render('buscar.ejs', { title: lat});
 			console.log("Buscar presionado" + Date.now());
 
 	});
