@@ -5,6 +5,7 @@ var sqlParam = {
   host     : 'localhost',
   user     : 'root',
   password : 'rareware',
+  port     : '3307',
   database : 'ladrillo_db',
 };
 

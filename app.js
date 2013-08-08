@@ -4,7 +4,10 @@
  */
 
 var express = require('express')
-  , routes = require('./routes')
+  , routes = {
+    'index': require('./routes/').index,
+    'buscar': require('./routes/buscar').index
+  }
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
@@ -13,11 +16,10 @@ var prop = require('./properties/Properties')
   , sql = require('./properties/Connection')
   , mysql = require('mysql');
 
-
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 1337, '195.0.100.15');
+app.set('port', process.env.PORT || 1337, '192.168.6.19');
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(express.favicon());
@@ -31,10 +33,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 if ('development' == app.get('env')) { 
   app.use(express.errorHandler());
 }
- 
-app.get('/', routes.index);
-app.get('/index.html', routes.index);
-app.get('/busca.html', routes.buscar);
+
+console.log(routes);
+app.get('/', routes['index']);
+app.get('/index.html', routes['index']);
+app.get('/busca.html', routes['buscar']);
 app.get('/users', user.list); 
 
 /*------------------------------------------------------------------------------|
