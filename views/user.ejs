@@ -39,7 +39,7 @@
                     <a class="logo brand" href="/">Ladrillo</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li class="active advent solid"><a href="busca.html">Busca</a></li>
+                            <li class="advent solid"><a href="busca.html">Busca</a></li>
                             <li><a href="vende.html" class="advent solid">Vende</a></li>
                             <li><a href="estima.html" class="advent solid">Estima</a></li>
                             
@@ -51,12 +51,12 @@
                             </div>
                             
                         </form>/.nav-collapse -->
-                        <form class="navbar-form pull-right">
+                        <div class="navbar-form pull-right">
                             <div class="btn-group">
-                                <a href="Entrar.html" class=" btn btn-small">Entrar</a>
-                                <a href="EntrarIco.html" class=" btn btn-small"><i class="icon-book"></i></a>
+                                <a  class=" btn btn-small disabled">Entrar</a>
+                                <a  class=" btn btn-small disabled"><i class="icon-book"></i></a>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,34 +64,67 @@
 
         <div class="container top">
             <!-- Example row of columns -->
+            <br/>
             <div class="row row-fluid"> 
-                
-                <div class="offset4 span4">
-                    <h2 >Usuario</h2>
-
-                    <ul class="thumbnails">
-                      <li class="span12">
-                        <a class="thumbnail">
-                          <form >
-                          <h5> Email </h5>
-                          <input type="text" class="input-small" placeholder="Email"/>
-                          <h5> Contraseña </h5>
-                          <input type="password" class="input-small" placeholder="Contraseña"/>
-                          <label class="checkbox">
-                            <input type="checkbox"> Recordarme
-                          </label>
-                          <button type="submit" class="btn">Entrar</button>
-                        </form>
-                        </a>
-                      </li>
-                    </ul>
+                <div class="span12">
+                <div class="offset2 span4">
+                    
+                        <div class="hero-unit">
+                            <h2>Entra a tu cuenta</h2><br/>
+                           <form>
+                              <div class="control-group">
+                                <div class="controls">
+                                  <input type="text" id="inputEmail" placeholder="Email">
+                                </div>
+                              </div>
+                              <div class="control-group">
+                                <div class="controls">
+                                  <input type="password" id="inputPassword" placeholder="Contraseña">
+                                </div>
+                              </div>
+                              <div class="control-group">
+                                <div class="controls">
+                                  <label class="checkbox">
+                                    <input type="checkbox"> Recordarme
+                                    
+                                  </label><br/>
+                                  <button type="submit" class="btn">Entrar</button>
+                                </div>
+                              </div>
+                            </form>
+                        </div>
+                        </div>
+                        <div class="span4">
+                        <div class="hero-unit">
+                            <h3>Si no tienes cuenta, registrate</h3>
+                            <form>
+                              <div class="control-group">
+                                <div class="controls">
+                                  <input type="text" id="inputEmail" placeholder="Email">
+                                </div>
+                              </div>
+                              <div class="control-group">
+                                <div class="controls">
+                                  <input type="password" id="inputPassword" placeholder="Contraseña">
+                                </div>
+                              </div>
+                              <div class="control-group">
+                                <div class="controls">
+                                  <input type="password" id="inputPassword" placeholder="Confirma Contraseña">
+                                </div>
+                              </div>
+                              <div class="control-group">
+                                <div class="controls">
+                                 
+                                  <button type="submit" class="btn">Registrate</button>
+                                </div>
+                              </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-
             </div>
 
-            <footer>
-                <p>&copy; Company 2013</p>
-            </footer>
 
         </div> <!-- /container -->
 

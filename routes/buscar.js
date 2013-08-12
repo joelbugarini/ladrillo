@@ -1,5 +1,5 @@
-var prop = require('../properties/Properties')
-  , sql = require('../properties/Connection')
+var prop = require('../dataaccess/Properties')
+  , sql = require('../dataaccess/Read')
   , mysql = require('mysql');
 
 
