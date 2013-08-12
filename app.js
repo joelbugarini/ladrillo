@@ -6,7 +6,10 @@
 var express = require('express')
   , routes = {
     'index': require('./routes/').index,
-    'buscar': require('./routes/buscar').index
+    'buscar': require('./routes/buscar').index,
+    'user': require('./routes/user').index,
+    'vende': require('./routes/vende').index,
+    'estima': require('./routes/estima').index
   }
   , user = require('./routes/user')
   , http = require('http')
@@ -19,7 +22,7 @@ var prop = require('./properties/Properties')
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 1337, '192.168.6.19');
+app.set('port', process.env.PORT || 1337, '192.168.1.65');
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(express.favicon());
@@ -38,7 +41,11 @@ console.log(routes);
 app.get('/', routes['index']);
 app.get('/index.html', routes['index']);
 app.get('/busca.html', routes['buscar']);
-app.get('/users', user.list); 
+app.get('/entrar.html', routes['user']); 
+app.get('/entrarico.html', routes['user']); 
+app.get('/vende.html', routes['vende']);
+app.get('/estima.html', routes['estima']);
+
 
 /*------------------------------------------------------------------------------|
 |---------------------- Asynchronous iteration pattern -------------------------|

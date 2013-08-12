@@ -4,8 +4,7 @@ var mysql = require('mysql');
 var sqlParam = {
   host     : 'localhost',
   user     : 'root',
-  password : 'rareware',
-  port     : '3307',
+  password : '',
   database : 'ladrillo_db',
 };
 
