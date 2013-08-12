@@ -2,13 +2,12 @@ var prop = require('./Properties');
 var mysql = require('mysql');
 
 var sqlParam = {
-  host     : 'localhost',
+  host     : '127.0.0.1',
   user     : 'root',
   password : 'rareware',
   database : 'ladrillo_db',
 };
-
-exports.readAgente = function(callback){
+exports.Agente = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_agente_SelectAll()', callback);
@@ -32,7 +31,7 @@ exports.fillAgente = function fillAgente(rows){
 
 	return Agente; 
 }
-exports.readAgentecriticas = function(callback){
+exports.Agentecriticas = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_agentecriticas_SelectAll()', callback);
@@ -50,7 +49,7 @@ exports.fillAgentecriticas = function fillAgentecriticas(rows){
 
 	return Agentecriticas; 
 }
-exports.readAislamiento = function(callback){
+exports.Aislamiento = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_aislamiento_SelectAll()', callback);
@@ -69,7 +68,7 @@ exports.fillAislamiento = function fillAislamiento(rows){
 
 	return Aislamiento; 
 }
-exports.readCalefaccion = function(callback){
+exports.Calefaccion = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_calefaccion_SelectAll()', callback);
@@ -88,7 +87,7 @@ exports.fillCalefaccion = function fillCalefaccion(rows){
 
 	return Calefaccion; 
 }
-exports.readCasa = function(callback){
+exports.Casa = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_casa_SelectAll()', callback);
@@ -107,7 +106,7 @@ exports.fillCasa = function fillCasa(rows){
 
 	return Casa; 
 }
-exports.readCasaservicios = function(callback){
+exports.Casaservicios = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_casaservicios_SelectAll()', callback);
@@ -126,7 +125,7 @@ exports.fillCasaservicios = function fillCasaservicios(rows){
 
 	return Casaservicios; 
 }
-exports.readCerramiento = function(callback){
+exports.Cerramiento = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_cerramiento_SelectAll()', callback);
@@ -145,7 +144,7 @@ exports.fillCerramiento = function fillCerramiento(rows){
 
 	return Cerramiento; 
 }
-exports.readChimenea = function(callback){
+exports.Chimenea = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_chimenea_SelectAll()', callback);
@@ -164,7 +163,7 @@ exports.fillChimenea = function fillChimenea(rows){
 
 	return Chimenea; 
 }
-exports.readConstruccion = function(callback){
+exports.Construccion = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_construccion_SelectAll()', callback);
@@ -187,7 +186,7 @@ exports.fillConstruccion = function fillConstruccion(rows){
 
 	return Construccion; 
 }
-exports.readConstruccionmaterial = function(callback){
+exports.Construccionmaterial = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_construccionmaterial_SelectAll()', callback);
@@ -213,7 +212,7 @@ exports.fillConstruccionmaterial = function fillConstruccionmaterial(rows){
 
 	return Construccionmaterial; 
 }
-exports.readCritica = function(callback){
+exports.Critica = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_critica_SelectAll()', callback);
@@ -230,7 +229,7 @@ exports.fillCritica = function fillCritica(rows){
 
 	return Critica; 
 }
-exports.readEstimacion = function(callback){
+exports.Estimacion = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_estimacion_SelectAll()', callback);
@@ -250,7 +249,7 @@ exports.fillEstimacion = function fillEstimacion(rows){
 
 	return Estimacion; 
 }
-exports.readPared = function(callback){
+exports.Pared = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_pared_SelectAll()', callback);
@@ -269,7 +268,7 @@ exports.fillPared = function fillPared(rows){
 
 	return Pared; 
 }
-exports.readPintura = function(callback){
+exports.Pintura = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_pintura_SelectAll()', callback);
@@ -288,7 +287,7 @@ exports.fillPintura = function fillPintura(rows){
 
 	return Pintura; 
 }
-exports.readPiso = function(callback){
+exports.Piso = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_piso_SelectAll()', callback);
@@ -307,7 +306,7 @@ exports.fillPiso = function fillPiso(rows){
 
 	return Piso; 
 }
-exports.readRefrigeracion = function(callback){
+exports.Refrigeracion = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_refrigeracion_SelectAll()', callback);
@@ -326,7 +325,7 @@ exports.fillRefrigeracion = function fillRefrigeracion(rows){
 
 	return Refrigeracion; 
 }
-exports.readServicio = function(callback){
+exports.Servicio = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_servicio_SelectAll()', callback);
@@ -346,7 +345,7 @@ exports.fillServicio = function fillServicio(rows){
 
 	return Servicio; 
 }
-exports.readTecho = function(callback){
+exports.Techo = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_techo_SelectAll()', callback);
@@ -365,7 +364,7 @@ exports.fillTecho = function fillTecho(rows){
 
 	return Techo; 
 }
-exports.readTerreno = function(callback){
+exports.Terreno = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_terreno_SelectAll()', callback);
@@ -386,7 +385,7 @@ exports.fillTerreno = function fillTerreno(rows){
 
 	return Terreno; 
 }
-exports.readUbicacion = function(callback){
+exports.Ubicacion = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_ubicacion_SelectAll()', callback);
@@ -404,7 +403,7 @@ exports.fillUbicacion = function fillUbicacion(rows){
 
 	return Ubicacion; 
 }
-exports.readUsuario = function(callback){
+exports.Usuario = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_usuario_SelectAll()', callback);
@@ -423,7 +422,7 @@ exports.fillUsuario = function fillUsuario(rows){
 
 	return Usuario; 
 }
-exports.readUsuariocasas = function(callback){
+exports.Usuariocasas = function(callback){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
 	connection.query('call SP_usuariocasas_SelectAll()', callback);

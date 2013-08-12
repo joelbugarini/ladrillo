@@ -1,13 +1,13 @@
 var prop = require('../dataaccess/Properties')
-  , sql = require('../dataaccess/Read')
+  , Read = require('../dataaccess/Read')
   , mysql = require('mysql');
 
 
 exports.index = function(req, res){
-	sql.readUbicacion( function(err, rows, fields) {
+	Read.Ubicacion( function(err, rows, fields) {
 		if (err) throw err;
 
-			var Ubicacion = sql.fillUbicacion(rows);
+			var Ubicacion = Read.fillUbicacion(rows);
 			var lat = '';
 			for(var i = 0; i < Ubicacion.length; i++ ){
 				lat += 'var marker = new google.maps.Marker({'+
