@@ -3,7 +3,7 @@
 
 exports.agente = (function () {
     function agente(IdAgente, Usuario_idUsuario,Nombre,Descripcion,Direccion,Telefonos,Especialista,Contribuciones,Fecha) {
-        this.IdAgente = IdAgente;
+        if(IsNumber(IdAgente)) this.IdAgente = IdAgente;
         this.Usuario_idUsuario = Usuario_idUsuario;
         this.Nombre = Nombre;
         this.Descripcion = Descripcion;

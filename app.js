@@ -45,7 +45,7 @@ app.get('/entrar.html', routes['user']);
 app.get('/entrarico.html', routes['user']); 
 app.get('/vende.html', routes['vende']);
 app.get('/estima.html', routes['estima']);
-
+app.post('/estima.html', routes['estima']);
 
 /*------------------------------------------------------------------------------|
 |---------------------- Asynchronous iteration pattern -------------------------|

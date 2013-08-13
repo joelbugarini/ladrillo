@@ -8,10 +8,10 @@ var sqlParam = {
   database : 'ladrillo_db',
 };
 
-exports.readAgente = function(callback){
+exports.Agente = function(callback, req, res){
 	var connection = mysql.createConnection(sqlParam);
 	connection.connect();
-	agente.Usuario_idUsuario
-	connection.query('call SP_agente_Create('++')', callback);
+	console.log('CreateAgente'+ req.body.user.name);
+	connection.query('SELECT 1+1', callback);
 	connection.end();
 };
